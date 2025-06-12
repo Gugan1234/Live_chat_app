@@ -25,29 +25,18 @@ function App() {
   return (
     <div className="chat-container">
       <div className="chat-header">Mini RAG Application</div>
-      {/* <div className="chat-messages" id="chatMessages">
-        {messages.map((msg, idx) => (
-          <div
-            key={idx}
-            className={`chat-message ${msg.sender}-message`}
-          >
-            <div className="message-text">{msg.text}</div>
-            <div className="timestamp">{msg.time}</div>
-          </div>
-        ))}
-      </div> */}
+      
       <div className="chat-messages" id="chatMessages">
-  {messages.map((msg, idx) => (
-   <div className={`chat-message-wrapper ${msg.sender}`}>
-  <img src={msg.avatar} alt="avatar" className="avatar" />
-  <div className={`chat-message ${msg.sender}-message`}>
-    <div className="message-text">{msg.text}</div>
-    <div className="timestamp">{msg.time}</div>
-  </div>
-</div>
-
-  ))}
-</div>
+        {messages.map((msg, idx) => (
+          <div className={`chat-message-wrapper ${msg.sender}`}>
+            <img src={msg.avatar} alt="avatar" className="avatar" />
+            <div className={`chat-message ${msg.sender}-message`}>
+              <div className="message-text">{msg.text}</div>
+              <div className="timestamp">{msg.time}</div>
+              </div>
+              </div>
+      ))}
+      </div>
       <div className="chat-input">
         <input
           type="text"
